@@ -74,7 +74,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 padding: 0 5px; }
     .Surline, .Chemline { height:2px; background-color:#333; width:18px;  transition: all 2s;}
 					
-	#Surfactant { height:50vh; min-height:340px; background-color:#268C87;position: relative; cursor:pointer; background-image:url(image/banner/Surfactant_be.jpg); background-size:100% 100%; transition: all 1.5s}
+	#Surfactant { height:50vh; min-height:360px; background-color:#268C87;position: relative; cursor:pointer; background-image:url(image/banner/Surfactant_be.jpg); background-size:100% 100%; transition: all 1.5s}
 	#Surfactant:hover { background-color:#268C87;position: relative; cursor:pointer; background-image:url(image/banner/Surfactant_af.jpg); background-repeat: no-repeat ;background-size:110% 110%; transition: all 1.5s;}
     #Surfactant:after {
             content: "";
@@ -87,7 +87,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             right: 0%;
             transition: all 1.5s;	
         }
-	#Hidden { display: none; width:65%; } 
+	#Hidden { display: none; width:80%; } 
+	.mobilENTER { color:#FFF; font-size:18px; line-height:48px; font-family: 'Ubuntu', serif; letter-spacing:3px; display:none }
 	#Surfactant:hover h2, h6 { color:#FFF }
 	#Surfactant:hover #Hidden { display: block;
 	animation: fade-in, TestMove 1.5s; /*IE*/
@@ -120,7 +121,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		
 	
 				
-	#Chemical { height:50vh; min-height:340px; background-color:#4B275F;position: relative; cursor:pointer; background-image:url(image/banner/Chemical_be.jpg); background-size:100% 100%; transition: all 1.5s}
+	#Chemical { height:50vh; min-height:360px; background-color:#4B275F;position: relative; cursor:pointer; background-image:url(image/banner/Chemical_be.jpg); background-size:100% 100%; transition: all 1.5s}
 	#Chemical:hover { background-color:#4B275F;position: relative; cursor:pointer; background-image:url(image/banner/Chemical_af.jpg); background-repeat: no-repeat ;background-size:110% 110%; transition: all 1.5s;}
     #Chemical:after {
             content: "";
@@ -175,11 +176,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	 .navbar-bottom { display:block } 
      .side {display:none}
 	 .banner { width:100% }
+	 .mobilENTER  { display:block }
 	}
 	
 	@media screen and (max-width:768px){
 	 #Surfactant { min-height:420px; }
 	 #Hidden { width:100%; } 
+	}
+	@media screen and (max-width:560px){
+	 #Surfactant, #Chemical { min-height:500px;background-size:cover;background-position:65%}
+	 #Surfactant:hover { background-size:cover;background-position:65% }
+	 #Chemical:hover { background-size:cover;background-position:65% }
+	}
+	@media screen and (max-width:480px){
+	 #Surfactant { min-height:580px }
+	 #Chemical { min-height:500px }
+	}
 	}
 	
 @keyframes fade-in {
@@ -244,7 +256,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!--MOBLEMENU-->  
 <div id="mobilenav">
     <header>
-		<a id="cd-logo" href="Index.html"><img style="vertical-align:middle" width="120" src="icon/ChingHaoLOGO1.png" alt="Homepage"></a>
+		<a id="cd-logo" href="index.html"><img style="vertical-align:middle" width="120" src="icon/ChingHaoLOGO1.png" alt="Homepage"></a>
       
 	   <nav id="cd-top-nav">
        </nav>  
@@ -306,7 +318,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div style="text-align:center">
 
 <!--LOGO--> 
-<a href="Index.html"><img style="text-align:center; max-width:320px; margin-top:50px" width="55%" src="icon/ChingHaoLOGO.png"></a>
+<a href="index.html"><img style="text-align:center; max-width:320px; margin-top:50px" width="55%" src="icon/ChingHaoLOGO.png"></a>
 <!--LOGO--> 
 
 <!--選單--> 
@@ -347,14 +359,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="Surline"></div>
   
 <div style="text-align:left; position:relative; margin-top:15px; " id="line"></div> 
-<div style="text-align:left; position:relative; margin-top:25px;" id="Hidden"><h6>We produce a wide range of products, including surfactants for industry, auxiliaries for textile industry, surfactants for personal care & household, surfactants for agricultural chemicals, additives for plastics, electronic chemicals, and so on.</h6></div>
+<div style="text-align:left; position:relative; margin-top:25px;" id="Hidden">
+
+<h6>We produce a wide range of products, including surfactants for industry, auxiliaries for textile industry, surfactants for personal care & household, surfactants for agricultural chemicals, additives for plastics, electronic chemicals, and so on.</h6>
+<span class="mobilENTER"> > ENTER .. </span>
+</div>
 </div>
 
 <div class="col-lg-offset-1 col-lg-9" style="position:absolute; bottom:35px">
-<button id="Surfactantbtn" type="button" class="btn btn-outline-secondary">Cationic Surfactant</button>
-<button id="Surfactantbtn" type="button" class="btn btn-outline-secondary">Anionic Surfactant</button>
-<button id="Surfactantbtn" type="button" class="btn btn-outline-secondary">Amphoteric Surfactant</button>
-<button id="Surfactantbtn" type="button" class="btn btn-outline-secondary">Nonionic Surfactant</button>
+<button id="Surfactantbtn" type="button" class="btn btn-outline-secondary">Cationic</button>
+<button id="Surfactantbtn" type="button" class="btn btn-outline-secondary">Anionic</button>
+<button id="Surfactantbtn" type="button" class="btn btn-outline-secondary">Amphoteric</button>
+<button id="Surfactantbtn" type="button" class="btn btn-outline-secondary">Nonionic</button>
 </div>
 
 </div>
@@ -371,7 +387,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="Chemline"></div>
       
     <div style="text-align:left; position:relative; margin-top:15px; " id="line"></div> 
-    <div style="text-align:left; position:relative; margin-top:25px;" id="Hidden"><h6>Solvent for all types of alkanes and hydrocarbons. Green solvent for hydrocarbons. Monomer, functional monomers.</h6></div>
+    <div style="text-align:left; position:relative; margin-top:25px;" id="Hidden"><h6>Solvent for all types of alkanes and hydrocarbons. Green solvent for hydrocarbons. Monomer, functional monomers.</h6>
+    <span class="mobilENTER"> > ENTER .. </span>
+    </div>
     </div>
 
 <div class="col-lg-offset-1 col-lg-9" style="position:absolute; bottom:35px">
