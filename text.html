@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>無標題文件</title>
+<style>
+.pr-account-tab:hover {
+	background-color: green;	
+}
+.pr-account-tab-mobile {
+	background-color: green;	
+}
+</style>
+</head>
+
+<body>
+<div class="pr-account-tab">
+  <div class="pr-account-tab_account-info_value">
+    <span class="pr-account-tab__account-value">Value:</span>
+  </div>
+  <script>
+   $(".pr-account-tab").on("touchstart", touchStart);
+          // $(".pr-account-tab").on("touchmove", touchMove);
+          $(".pr-account-tab").on("touchend", touchEnd);
+          $(".pr-account-tab").on("mouseover", touchStart);
+          $(".pr-account-tab").on("mouseout", touchEnd);
+
+          function touchStart(event) {
+            $(this).addClass("pr-account-tab-mobile");
+          }
+
+          // function touchMove(event) {
+          //   // $("pr-account-tab-mobile").html("You are moving");
+          //   // $(this).addClass("pr-account-tab-mobile");
+          // }
+
+          function touchEnd(event) {
+            $(this).removeClass("pr-account-tab-mobile");
+          }
+  </script>
+</body>
+</html>
