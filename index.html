@@ -72,7 +72,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 color: #CCCCCC;
                 content: " / ";
                 padding: 0 5px; }
-    .Surline, .Chemline { height:2px; background-color:#333; width:18px;  transition: all 2s;}
+    .Surline, .Chemline { height:2px; background-color:#333; width:18px; transition: all 2s; transition-delay:.5s}
 					
 	#Surfactant { height:50vh; min-height:360px; position: relative; cursor:pointer; background-image:url(image/banner/Surfactant_be.jpg); background-size:100% 100%; transition: all 1.5s}
 	#Surfactant:hover { position: relative; cursor:pointer; background-image:url(image/banner/Surfactant_af.jpg); background-repeat: no-repeat ;background-size:110% 110%; transition: all 1.5s;}
@@ -89,11 +89,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
 	#Hidden { display: none; width:80%; } 
 	.mobilENTER { color:#FFF; font-size:18px; line-height:48px; font-family: 'Ubuntu', serif; letter-spacing:3px; display:none }
-	#Surfactant:hover h2, h6 { color:#FFF }
+	#Surfactant:hover h2, h6 { color:#FFF; transition: all .5s; transition-delay:.2s }
 	#Surfactant:hover #Hidden { display: block;
-	animation: fade-in, TestMove 1.5s; /*IE*/
-    -moz-animation:fade-in 1s, TestMove 1.5s; /*FireFox*/
-    -webkit-animation:fade-in 1s, TestMove 1.5s; /*Chrome, Safari*/
+	animation: fade-in, TestMove 2.5s; /*IE*/
+    -moz-animation:fade-in 1s, TestMove 2.5s; /*FireFox*/
+    -webkit-animation:fade-in 1s, TestMove 2.5s; /*Chrome, Safari*/
 	}
 	#Surfactant:hover #Surfactantbtn { border-width:2px;border-style:solid;border-color:#FFF; background-color:transparent; }
 	#Surfactant:hover #Surfactantbtn:hover  { border-width:2px;border-style:solid;border-color:#FFF; background-color:#FFF; }
@@ -123,7 +123,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				
 	#Chemical { height:50vh; min-height:360px;position: relative; cursor:pointer; background-image:url(image/banner/Chemical_be.jpg); background-size:100% 100%; transition: all 1.5s}
 	#Chemical:hover { position: relative; cursor:pointer; background-image:url(image/banner/Chemical_af.jpg); background-repeat: no-repeat ;background-size:110% 110%; transition: all 1.5s;}
-    #Chemical:after {
+        #Chemical:after {
             content: "";
             width: 0;
             height: 5px;
@@ -134,11 +134,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             left: 0%;
             transition: all 1.5s;
         }
-	#Chemical:hover h2, h6 { color:#FFF }
+	#Chemical:hover h2, h6 { color:#FFF; transition: all .5s; transition-delay:.2s}
 	#Chemical:hover #Hidden { display: block;
-	animation: fade-in, TestMove 1.5s; /*IE*/
-    -moz-animation:fade-in 1s, TestMove 1.5s; /*FireFox*/
-    -webkit-animation:fade-in 1s, TestMove 1.5s; /*Chrome, Safari*/
+	animation: fade-in, TestMove 2.5s; /*IE*/
+    -moz-animation:fade-in 1s, TestMove 2.5s; /*FireFox*/
+    -webkit-animation:fade-in 1s, TestMove 2.5s; /*Chrome, Safari*/
 	}
 	#Chemical:hover #Chemicalbtn { border-width:2px;border-style:solid;border-color:#FFF; background-color:transparent; }
 	#Chemical:hover #Chemicalbtn:hover  { border-width:2px;border-style:solid;border-color:#FFF; background-color:#FFF; }
@@ -168,13 +168,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .navbar-bottom { display:none }
 	
 	h2 { font-size:36px; font-family: 'Oswald', sans-serif; color:#333; letter-spacing:2px;line-height:1.5 }
-	h6 { font-size:14px; line-height:22px; letter-spacing:1px }
+	h6 { font-size:14px; font-family: 'Lato', sans-serif; line-height:22px; letter-spacing:1px; line-height:1.5; color:#FFF; font-weight:300 }
 	
 	
 	 
 	@media screen and (max-width:1200px){
 	 .navbar-bottom { display:block } 
-     .side {display:none}
+         .side {display:none}
 	 .banner { width:100% }
 	 .mobilENTER  { display:block }
 	}
@@ -184,14 +184,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	 #Hidden { width:100%; } 
 	}
 	@media screen and (max-width:560px){
-	 #Surfactant { background-image:url(image/banner/Surfactant_be.jpg);min-height:500px;background-size:cover;background-position:60%}
-	 #Chemical { background-image:url(image/banner/Chemical_be.jpg);min-height:500px;background-size:cover;background-position:60% }
-	 #Surfactant:hover { background-image:url(image/banner/Surfactant_af.jpg); background-size:cover;background-position:50%;position: relative;}
-	 #Chemical:hover { background-image:url(image/banner/Chemical_af.jpg);background-size:cover;background-position:50%;position: relative; }
+	 #Surfactant { background-image:url(image/banner/Surfactant_be.jpg);min-height:420px;background-size:cover;background-position:60%}
+	 #Chemical { background-image:url(image/banner/Chemical_be.jpg);min-height:420px;background-size:cover;background-position:60% }
+	 #Surfactant:hover { background-image:url(image/banner/Surfactant_af.jpg); background-size:cover;background-position:50%;position: relative; transition: all 3s;}
+	 #Chemical:hover { background-image:url(image/banner/Chemical_af.jpg);background-size:cover;background-position:50%;position: relative; transition: all 3s; }
 	}
 	@media screen and (max-width:480px){
-	 #Surfactant { min-height:580px }
-	 #Chemical { min-height:500px }
+	 #Surfactant,#Chemical  { min-height:530px }
 	}
 	}
 	
