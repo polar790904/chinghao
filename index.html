@@ -74,7 +74,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 padding: 0 5px; }
     .Surline, .Chemline { height:2px; background-color:#333; width:18px; transition: all 2s; transition-delay:.5s}
 					
-	#Surfactant { height:50vh; min-height:360px; position: relative; cursor:pointer; background-image:url(image/banner/Surfactant_be.jpg); background-size:100% 100%; transition: all 1.5s}
+	#Surfactant { height:50vh; min-height:320px; position: relative; cursor:pointer; background-image:url(image/banner/Surfactant_be.jpg); background-size:100% 100%; transition: all 1.5s}
 	#Surfactant:hover { position: relative; cursor:pointer; background-image:url(image/banner/Surfactant_af.jpg); background-repeat: no-repeat ;background-size:110% 110%; transition: all 1.5s;}
     #Surfactant:after {
             content: "";
@@ -119,11 +119,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             width: 100%;
         }
 		
-	
-				
-	#Chemical { height:50vh; min-height:360px;position: relative; cursor:pointer; background-image:url(image/banner/Chemical_be.jpg); background-size:100% 100%; transition: all 1.5s}
+	#Chemical { height:50vh; min-height:320px;position: relative; cursor:pointer; background-image:url(image/banner/Chemical_be.jpg); background-size:100% 100%; transition: all 1.5s}
 	#Chemical:hover { position: relative; cursor:pointer; background-image:url(image/banner/Chemical_af.jpg); background-repeat: no-repeat ;background-size:110% 110%; transition: all 1.5s;}
-        #Chemical:after {
+    #Chemical:after {
             content: "";
             width: 0;
             height: 5px;
@@ -170,11 +168,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	h2 { font-size:36px; font-family: 'Oswald', sans-serif; color:#333; letter-spacing:2px;line-height:1.5 }
 	h6 { font-size:14px; font-family: 'Lato', sans-serif; line-height:22px; letter-spacing:1px; line-height:1.5; color:#FFF; font-weight:300 }
 	
-	
 	 
 	@media screen and (max-width:1200px){
 	 .navbar-bottom { display:block } 
-         .side {display:none}
+     .side {display:none}
 	 .banner { width:100% }
 	 .mobilENTER  { display:block }
 	}
@@ -247,7 +244,7 @@ animation-delay: 2s;
 
 </head>
 
-<body style="background-color:#F9F9F9;">
+<body ontouchstart>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TN2MDG4"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -353,7 +350,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 'Surfactant.html';" id="Surfactant">
 
 <div class=" col-md-offset-1 col-md-10">
-<div style="text-align:left; position:relative; padding-top:65px" id="left">
+<div style="text-align:left; position:relative; padding-top:55px" id="left">
   <h2>SURFACTANT</h2></div> 
   
   <div class="Surline"></div>
@@ -366,7 +363,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 </div>
 
-<div class="col-lg-offset-1 col-lg-9" style="position:absolute; bottom:35px">
+<div class="col-md-offset-1 col-md-9" style="position:absolute; bottom:25px">
 <button id="Surfactantbtn" type="button" class="btn btn-outline-secondary">Cationic</button>
 <button id="Surfactantbtn" type="button" class="btn btn-outline-secondary">Anionic</button>
 <button id="Surfactantbtn" type="button" class="btn btn-outline-secondary">Amphoteric</button>
@@ -381,7 +378,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
     <div class=" col-md-offset-1 col-md-10">
-    <div style="text-align:left; position:relative; padding-top:65px" id="left">
+    <div style="text-align:left; position:relative; padding-top:55px" id="left">
       <h2>RAW CHEMISTRY</h2></div> 
       
       <div class="Chemline"></div>
@@ -392,7 +389,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     </div>
 
-<div class="col-lg-offset-1 col-lg-9" style="position:absolute; bottom:35px">
+<div class="col-md-offset-1 col-md-9" style="position:absolute; bottom:25px">
 <button id="Chemicalbtn" type="button" class="btn btn-outline-secondary">ALCOHOL</button>
 <button id="Chemicalbtn" type="button" class="btn btn-outline-secondary">ESTER</button>
 <button id="Chemicalbtn" type="button" class="btn btn-outline-secondary">KETONES</button>
@@ -410,7 +407,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <footer class="navbar-bottom">
 <div style="width:100%">
   <div style="background-image:url(image/background/background.jpg);" id="compangbg" class="col-lg-12">
-    <div class="col-lg-offset-1 col-lg-7">
+    <div style="font-size:14px" class="col-lg-offset-1 col-lg-7">
     <span style="color:#ccc; font-family: 'Lato', sans-serif; font-size:14px; line-height:32px"><span style="font-family: 'TengXiangBoDangXingKaiFan', sans-serif; color:#FFF; font-size:24px; letter-spacing:5px; line-height:65px">青昊有限公司</span><br>
 TEL : <a style="color:#ccc" href="tel:02-8252-2591"> (02)&nbsp;8252-2591 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FAX : (02)&nbsp;8252-2180
  <br>MAIL : <a style="color:#FFF; font-weight:400" href="mailto:vincent650622@gmail.com" onClick="ga('send', 'event', 'email', 'click');">vincent650622@gmail.com</a>  <br>
