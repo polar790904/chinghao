@@ -74,7 +74,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 padding: 0 5px; }
     .Surline, .Chemline { height:2px; background-color:#333; width:18px; transition: all 2s; transition-delay:.5s}
 					
-	#Surfactant { height:50vh; min-height:320px; position: relative; cursor:pointer; background-image:url(image/banner/Surfactant_be.jpg); background-size:100% 100%; transition: all 1.5s}
+	#Surfactant { height:50vh; min-height:320px; background-color:#268C87; position: relative; cursor:pointer; background-image:url(image/banner/Surfactant_be.jpg); background-size:100% 100%; transition: all 1.5s}
 	#Surfactant:hover { position: relative; cursor:pointer; background-image:url(image/banner/Surfactant_af.jpg); background-repeat: no-repeat ;background-size:110% 110%; transition: all 1.5s;}
     #Surfactant:after {
             content: "";
@@ -119,7 +119,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             width: 100%;
         }
 		
-	#Chemical { height:50vh; min-height:320px;position: relative; cursor:pointer; background-image:url(image/banner/Chemical_be.jpg); background-size:100% 100%; transition: all 1.5s}
+	#Chemical { height:50vh; min-height:320px; background-color:#4B275F;position: relative; cursor:pointer; background-image:url(image/banner/Chemical_be.jpg); background-size:100% 100%; transition: all 1.5s}
 	#Chemical:hover { position: relative; cursor:pointer; background-image:url(image/banner/Chemical_af.jpg); background-repeat: no-repeat ;background-size:110% 110%; transition: all 1.5s;}
     #Chemical:after {
             content: "";
@@ -244,7 +244,7 @@ animation-delay: 2s;
 
 </head>
 
-<body ontouchstart>
+<body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TN2MDG4"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -463,6 +463,32 @@ $(document).ready(function(){
 
 </body>
 <script>
-document.body.addEventListener('touchstart',function(){});
+$(function () {
+     $("#Surfactant").attr('ontouchstart', 'hover(this)');//hover效果
+     $("#Surfactant").attr('ontouchend', 'mouseout(this)');//秒除hover
+	 $("#Chemical").attr('ontouchstart', 'hover(this)');//hover效果
+     $("#Chemical").attr('ontouchend', 'mouseout(this)');//秒除hover
+ })
+ function mouseout(obj) {
+  var className = "hover";
+  var _ecname = obj.className;
+  if (_ecname.length == 0) return;
+  if (_ecname == className) {
+   obj.className = "";return;
+  }
+  if (_ecname.match(new RegExp("(^|\\s)" + className + "(\\s|$)")))
+   obj.className = _ecname.replace((new RegExp("(^|\\s)" + className + "(\\s|$)")), " ");
+ }
+ function hover(obj) {
+  if (!obj) return;
+  var className = "hover"
+  var _ecname = obj.className;
+  if (_ecname.length == 0) {
+   obj.className = className;return;
+  }
+  if (_ecname == className || _ecname.match(new RegExp("(^|\\s)" + className + "(\\s|$)")))
+   return;
+  obj.className = _ecname + " " + className;
+ }
 </script>
 </html>
