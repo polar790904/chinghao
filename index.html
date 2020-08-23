@@ -345,8 +345,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 <!--SIDE側選單-->  
 
-<a href="Surfactant.html">
-<div class="col-lg-9 col-lg-offset-3 box fade-in one" id="Surfactant">
+<script>
+$(document).ready(function(){
+$('#Surfactant').click(function(){
+setTimeout(function () {
+   location.href = 'Surfactant.html'
+}, 1500)
+});
+});
+</script>
+
+
+<div class="col-lg-9 col-lg-offset-3 box fade-in one" onclick=""  id="Surfactant">
 
 <div class=" col-md-offset-1 col-md-10">
 <div style="text-align:left; position:relative; padding-top:55px" id="left">
@@ -370,7 +380,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 </div>
-</a>
+
 
 
 <div class="col-lg-9 col-lg-offset-3 box fade-in two" onclick="location.href=
@@ -491,3 +501,4 @@ $(function () {
   obj.className = _ecname + " " + className;
  }
 </script>
+</html>
