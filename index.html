@@ -72,7 +72,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 color: #CCCCCC;
                 content: " / ";
                 padding: 0 5px; }
-    .Surline, .Chemline { height:2px; background-color:#333; width:18px; transition: all 2s; transition-delay:.5s}
+    .Surline, .Chemline { height:2px; background-color:#333; width:18px; transition: all 1s; transition-delay:.5s}
 					
 	#Surfactant { height:50vh; min-height:320px; background-color:#268C87; position: relative; cursor:pointer; background-image:url(image/banner/Surfactant_be.jpg); background-size:100% 100%; transition: all 1.5s}
 	#Surfactant:hover { position: relative; cursor:pointer; background-image:url(image/banner/Surfactant_af.jpg); background-repeat: no-repeat ;background-size:110% 110%; transition: all 1.5s;}
@@ -91,9 +91,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	.mobilENTER { color:#FFF; font-size:18px; line-height:48px; font-family: 'Ubuntu', serif; letter-spacing:3px; display:none }
 	#Surfactant:hover h2, h6 { color:#FFF; transition: all .5s; transition-delay:.2s }
 	#Surfactant:hover #Hidden { display: block;
-	animation: fade-in, TestMove 2.5s; /*IE*/
-    -moz-animation:fade-in 1s, TestMove 2.5s; /*FireFox*/
-    -webkit-animation:fade-in 1s, TestMove 2.5s; /*Chrome, Safari*/
+	animation: fade-in, TestMove 1s; /*IE*/
+    -moz-animation:fade-in 1s, TestMove 1s; /*FireFox*/
+    -webkit-animation:fade-in 1s, TestMove 1s; /*Chrome, Safari*/
 	}
 	#Surfactant:hover #Surfactantbtn { border-width:2px;border-style:solid;border-color:#FFF; background-color:transparent; }
 	#Surfactant:hover #Surfactantbtn:hover  { border-width:2px;border-style:solid;border-color:#FFF; background-color:#FFF; }
@@ -134,9 +134,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
 	#Chemical:hover h2, h6 { color:#FFF; transition: all .5s; transition-delay:.2s}
 	#Chemical:hover #Hidden { display: block;
-	animation: fade-in, TestMove 2.5s; /*IE*/
-    -moz-animation:fade-in 1s, TestMove 2.5s; /*FireFox*/
-    -webkit-animation:fade-in 1s, TestMove 2.5s; /*Chrome, Safari*/
+	animation: fade-in, TestMove 1s; /*IE*/
+    -moz-animation:fade-in 1s, TestMove 1s; /*FireFox*/
+    -webkit-animation:fade-in 1s, TestMove 1s; /*Chrome, Safari*/
 	}
 	#Chemical:hover #Chemicalbtn { border-width:2px;border-style:solid;border-color:#FFF; background-color:transparent; }
 	#Chemical:hover #Chemicalbtn:hover  { border-width:2px;border-style:solid;border-color:#FFF; background-color:#FFF; }
@@ -345,16 +345,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 <!--SIDE側選單-->  
 
-<script>
-$(document).ready(function(){
-$('#Surfactant').click(function(){
-setTimeout(function () {
-   location.href = 'Surfactant.html'
-}, 1500)
-});
-});
-</script>
-
 
 <div class="col-lg-9 col-lg-offset-3 box fade-in one" onclick=""  id="Surfactant">
 
@@ -383,8 +373,7 @@ setTimeout(function () {
 
 
 
-<div class="col-lg-9 col-lg-offset-3 box fade-in two" onclick="location.href=
-'Chemistry.html';" id="Chemical">
+<div class="col-lg-9 col-lg-offset-3 box fade-in two" onclick="" id="Chemical">
 
 
     <div class=" col-md-offset-1 col-md-10">
@@ -470,8 +459,23 @@ $(document).ready(function(){
     <!-- 依需要參考已編譯外掛版本（如下），或各自獨立的外掛版本 -->
     <script src="js/bootstrap.min.js"></script>
 
-
 </body>
+<script>
+$(document).ready(function(){
+$('#Surfactant').click(function(){
+setTimeout(function () {
+   location.href = 'surfactant.html'
+}, 1500)
+});
+});
+$(document).ready(function(){
+$('#Chemical').click(function(){
+setTimeout(function () {
+   location.href = 'chemistry.html'
+}, 1500)
+});
+});
+</script>
 <script>
 $(function () {
      $("#Surfactant").attr('ontouchstart', 'hover(this)');//hover效果
