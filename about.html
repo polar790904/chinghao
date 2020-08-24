@@ -71,16 +71,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 color: #CCCCCC;
                 content: " / ";
                 padding: 0 5px; }
-	.banner h3 {  font-family: 'Ubuntu', serif; font-size:24px }
+	h3 { font-family: 'Lato', serif; 
+	     font-size:18px; 
+		 line-height:1.5; 
+		 color:#333;
+		 margin-top:15px;
+		 margin-bottom:20px; }
+	.banner { background-position:50% 100%; }	 
 	
 	#text { margin-bottom:50px }
+	#card { position:relative;
+	        background-repeat: no-repeat;
+	        height:240px; 
+	        background-attachment:fixed;
+			background-position:100% 100%;
+			animation: card 5s ease 1 both;
+			 }
 							   
     .navbar-bottom { display:none }
+	
 	 
 	 @media screen and (max-width:1200px){
 	 .navbar-bottom { display:block } 
      .side {display:none}
-	 .banner { width:100% }
+	 .banner { }
+	}
+	
+	 @media screen and (max-width:768px){
+	 #card { 
+			background-position:50% 100%; }
 	}
 	
 @keyframes fade-in {
@@ -113,6 +132,15 @@ animation: fade-in;/*動畫名稱*/
 animation-duration: 3s;/*動畫持續時間*/
 -webkit-animation:fade-in 3s;/*針對webkit*/
 }	
+
+@keyframes card {
+    from { top:-60px }
+    to { top:0px;}
+}
+@-webkit-keyframes card {
+    from { top:-60px }
+    to { top:0px;}
+}
     </style>
     
 
@@ -220,7 +248,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!--SIDE側選單-->  
 
 <!--BANNER-->  
-<div class="col-lg-9 col-lg-offset-3 banner" style="background-image:url(image/title/about.png);background-repeat: no-repeat; background-size:100% 100%; min-height:180px ">
+<div class="col-lg-9 col-lg-offset-3 banner" style="background-image:url(image/title/about.png);background-repeat: no-repeat; background-size:auto, auto; min-height:180px ">
 </div> 
 <!--BANNER--> 
 
@@ -241,9 +269,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <span style="font-family: 'TengXiangBoDangXingKaiFan', sans-serif; font-size:32px; vertical-align:middle;line-height:42px; letter-spacing:8px">青昊有限公司</span>
 </div>
 
+
 <!--公司簡介-->  
 <div id="text" class="col-lg-offset-1 col-lg-7" style="margin-top:15px">
-<p style="font-size:14px; letter-spacing:1px; line-height:26px;text-align:justify;font-family: 'Open Sans', sans-serif; color:#333;">
+
+<h3>Safety x Quality x Integrity x Service</h3>
+
+<p style="font-size:14px; letter-spacing:1px; line-height:24px;text-align:justify;font-family: 'Open Sans', sans-serif; font-weight:400; color:#666;">
 CHING HAO is an importer and exporter of interface agents and various chemical raw materials. It was established in 2017. The entrepreneurial team has more than several years of experience in the chemical field.
 <br><br>
 We uphold the belief and intention to operate, require efficiency and quality to comply with the business philosophy of "safety first", "quality first", "integrity without me", and "sustainable inheritance", and constantly try to introduce various excellent chemical raw materials and listen to customers Opinions grow with customers. Qinghao is proud of the integrity and uncompromising quality of its customers. With the company, support and hard work of all suppliers, customers and partners, Qinghao believes that the company's business can change with each passing day and create more brilliant results.
@@ -253,18 +285,22 @@ We uphold the belief and intention to operate, require efficiency and quality to
 
 <!--人物-->
 <div id="text" class="col-lg-3" style="text-align:center; margin-top:15px ">
-  <div id="text2" class="col-lg-12" style="text-align:center; margin-top:15px ">
+  <div class="col-lg-12" style="text-align:center; margin-top:15px ">
     <div style="width:100px;height:100px;border-radius:999em;background-color:#CCC; margin-bottom:15px"></div>
-    <p style="font-size:14px; letter-spacing:2px; line-height:22px;text-align:left;font-family: 'cwTeXMing', serif; color:#333;"> <span style="font-size:13px;letter-spacing:1px">- General manager</span><br>
+    <p style="font-size:12px; letter-spacing:1px; line-height:22px;text-align:left;font-family: 'Noto Serif TC', serif; color:#999;">- General Manager<br>
       &nbsp;&nbsp;Vincent </p>
   </div>
   <p style="font-size:14px; letter-spacing:2px; line-height:22px;text-align:left;font-family: 'cwTeXMing', serif; color:#333;">&nbsp;</p>
 </div>
 <!--人物-->  
 
-
 </div>
 
+
+<!--card-->  
+<div id="card" class="col-lg-8 col-lg-offset-4" style="background-image:url(image/background/about.jpg)">
+</div> 
+<!--card--> 
 
 	
 <!--FOOTER-->
