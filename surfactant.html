@@ -54,7 +54,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	#Surfactantbtn:hover {background-color:#333; color:#FFF; border:none}
 	#Surfactantbtn:focus {background-color:#333; color:#FFF; border:none} /*產品按鈕定義結束*/
 	
-	#SurfactantBG { background-size:cover;background-attachment:fixed;background-repeat: no-repeat; }
+	.SurfactantBG { background:transparent; }
+    .SurfactantBG:after {
+	content:"";
+	position:fixed;
+	left:0;
+	top:0;
+	right:0;
+	bottom:0;
+	z-index:-1;
+	display:block;
+	background:url(image/background/Surfactant_BG.jpg) no-repeat 50% 50%;
+	background-size:cover;
+    }
 	
 	#mobilebtn { display:none } /*手機產品按鈕定義*/
 	
@@ -112,6 +124,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 0% {opacity: 0;}
 40% {opacity: 0;}
 100% {opacity: 1;}
+}
+.SurfactantBG:after {
+animation: fade-in;/*動畫名稱 淡入*/
+animation-duration: 2.5s;/*動畫持續時間*/
+-webkit-animation:fade-in 2.5s;/*針對webkit*/
 }
 #Surfactant {
 animation: fade-in;/*動畫名稱 淡入*/
@@ -231,7 +248,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!--DESKEMENU--> 
 <!--MENU-->
 	
-<div id="SurfactantBG" class="col-lg-12 text-center" style="background-image:url(image/background/Surfactant_BG.jpg);"> 
+<div class="col-lg-12 text-center SurfactantBG"> 
    
 <div style="text-align:center;" class="col-lg-offset-1 col-lg-10" id="Surfactant" class="">
 
